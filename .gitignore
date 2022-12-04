@@ -1,0 +1,18 @@
+# IDE
+.vscode
+
+# Logs
+*.log
+
+# Dependency
+node_modules
+
+# Next
+/.next/
+next-env.d.ts
+
+# Mac file system
+.DS_Store
+
+# Next out
+out

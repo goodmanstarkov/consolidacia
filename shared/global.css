@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+
+/* Базовые стили. */
+:root {
+  font-size: 16px;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html,
+body {
+  height: 100%;
+  font-size: inherit;
+}
+
+body {
+  font-weight: 400;
+  line-height: 1.5;
+  font-family: inherit;
+  text-rendering: optimizeSpeed;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+@tailwind utilities;

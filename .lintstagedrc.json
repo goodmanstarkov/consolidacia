@@ -1,0 +1,6 @@
+{
+  "app/**/*.{ts,tsx}": "eslint --color --fix",
+  "shared/**/*.{ts,tsx}": "eslint --color --fix",
+  "widgets/**/*.{ts,tsx}": "eslint --color --fix",
+  "*.{js,ts,tsx,css,json,md}": "prettier --write"
+}
