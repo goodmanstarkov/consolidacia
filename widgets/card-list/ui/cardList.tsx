@@ -1,4 +1,4 @@
-import { Card, ICard } from 'shared/ui/cards/card'
+import { Card, ICard } from 'shared/ui/card'
 
 interface ICardList {
   items: ICard[]

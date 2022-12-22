@@ -2,7 +2,7 @@
 
 import clsx from 'clsx'
 import Link from 'next/link'
-import { useCallback, useEffect, useRef, useState } from 'react'
+import React, { useCallback, useEffect, useRef, useState } from 'react'
 import { Container } from 'shared/ui/container'
 import { BiMenu } from 'react-icons/bi'
 import { IoClose } from 'react-icons/io5'
@@ -27,7 +27,8 @@ export const Header = () => {
     }
   }
 
-  const handleToggleVisibledDropdown = () => {
+  const handleToggleVisibledDropdown = (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.stopPropagation()
     setVisibleDropdown(!isVisibleDropdown)
   }
 
@@ -53,28 +54,24 @@ export const Header = () => {
             <FiMail size={20} />
             <span className='ml-3 sm:max-md:text-sm text-md'>help@consolidacia.ru</span>
           </Link>
-          <Link href='tel:+79773786273' className='flex items-center text-white hover:opacity-70 active:opacity-70'>
+          <Link href='tel:+74999645683' className='flex items-center text-white hover:opacity-70 active:opacity-70'>
             <BsTelephone size={18} />
             <span className='ml-3 sm:max-md:text-sm text-md'>+7 499 964 56 83</span>
           </Link>
         </Container>
       </div>
-      <div
-        className={clsx('h-20', {
-          hidden: !isTransformHeaderStyle,
-        })}
-      />
       <header
-        className={clsx('bg-white z-10 w-full h-20 transition-all ease-in-out duration-150', {
-          'shadow-sm-bottom': isTransformHeaderStyle,
-          fixed: isTransformHeaderStyle,
+        className={clsx('sticky top-0 bg-white z-10 w-full h-20', {
+          'lg:shadow-sm-bottom': isTransformHeaderStyle,
+          'sm:max-lg:shadow-sm-bottom': isTransformHeaderStyle && !isVisibleDropdown,
         })}
       >
         <div className='relative h-full'>
           <Container>
             <div className='flex justify-between items-center h-full'>
-              <Link href='/' className='justify-self-center'>
-                <Logo className='text-secondary' />
+              <Link href='/' className='flex items-center justify-self-center'>
+                <Logo className='h-[4rem]' />
+                <div className='font-bold text-xl text-cobalt text-secondary ml-4'>КОНСОЛИДАЦИЯ</div>
               </Link>
               <HeaderNav isVisibleDropdown={isVisibleDropdown} setVisibleDropdown={setVisibleDropdown} />
               <button

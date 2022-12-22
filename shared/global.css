@@ -1,5 +1,6 @@
 @tailwind base;
 @tailwind components;
+@tailwind utilities;
 
 /* Базовые стили. */
 :root {
@@ -32,5 +33,3 @@ body {
 [hidden] {
   display: none !important;
 }
-
-@tailwind utilities;

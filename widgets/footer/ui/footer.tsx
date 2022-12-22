@@ -6,7 +6,7 @@ export const Footer = () => {
   return (
     <footer className='mt-auto bg-cobalt'>
       <Container className='text-center'>
-        <p className='text-white py-3'>© {currentYear} ООО "Консолидация". Все права защищены.</p>
+        <p className='text-white py-3 sm:max-md:text-sm'>© {currentYear} ООО "Консолидация". Все права защищены.</p>
       </Container>
     </footer>
   )

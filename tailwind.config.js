@@ -1,8 +1,6 @@
-const { config } = require('process')
-
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ['./app/**/*.tsx', './shared/**/*.tsx', './widgets/**/*.tsx'],
+  content: ['./pages/**/*.tsx', './shared/**/*.tsx', './widgets/**/*.tsx'],
   theme: {
     colors: {
       transparent: 'transparent',
@@ -14,9 +12,12 @@ module.exports = {
       dodgerBlue: '#26b1ff',
       mineShaft: '#252525',
       silver: '#cccccc',
+      red: '#ff0000',
+      gray: '#dddddd',
     },
     boxShadow: {
       'sm-bottom': '0px 0px 15px 0px rgba(0, 0, 0, 0.07)',
+      'around-form-block': '0px 0px 10px 0px rgba(0, 0, 0, 0.1)',
     },
     screens: {
       sm: '336px',
@@ -27,7 +28,6 @@ module.exports = {
     container: {
       center: true,
       screens: {
-        sm: '336px',
         md: '788px',
         lg: '1044px',
         xl: '1160px',

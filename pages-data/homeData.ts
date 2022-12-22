@@ -1,4 +1,4 @@
-import { ICard } from 'shared/ui/cards'
+import { ICard } from 'shared/ui/card'
 import { MdSupportAgent } from 'react-icons/md'
 import { GiReceiveMoney, GiNetworkBars } from 'react-icons/gi'
 

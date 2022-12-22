@@ -1,14 +1,15 @@
 import { CardList } from 'widgets/card-list'
 import { ContactUsButton } from 'shared/ui/contact-us-button'
 import { Container } from 'shared/ui/container'
-import analysisImg from 'public/images/analysis.jpg'
-import diagramImg from 'public/images/diagram.png'
-import Image from 'next/image'
 import { AiFillCheckCircle } from 'react-icons/ai'
-import { additionalBenefitsData, benefitsData } from './data'
+import Head from 'next/head'
+import { additionalBenefitsData, benefitsData } from 'pages-data/homeData'
 
 const Home = () => (
   <>
+    <Head>
+      <title>Консолидация</title>
+    </Head>
     <section className='bg-blackSqueeze'>
       <Container className='sm:max-lg:py-24 lg:py-36 text-center'>
         <h2 className='text-lg text-cobalt font-semibold mb-5'>Компания Консолидация</h2>
@@ -24,8 +25,8 @@ const Home = () => (
         <CardList items={benefitsData} />
         <div className='mt-24 flex flex-wrap justify-center'>
           <div className='lg:w-[calc(50%-3rem)] sm:max-lg:w-full'>
-            <Image className='mx-auto' alt='Бухгалтерская Консультация' src={analysisImg} />
-            <Image className='mt-5 mx-auto' alt='Улучшение Показателей Отчётности' src={diagramImg} />
+            <img className='mx-auto' alt='Бухгалтерская Консультация' src='images/analysis.jpg' />
+            <img className='mt-5 mx-auto' alt='Улучшение Показателей Отчётности' src='images/diagram.png' />
           </div>
           <div className='lg:w-2/4 lg:ml-12 sm:max-lg:w-full sm:max-lg:mt-8'>
             <h6 className='font-bold mb-2.5 text-black lg:text-4xl sm:max-lg:text-2xl'>
